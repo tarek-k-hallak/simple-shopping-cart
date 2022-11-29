@@ -1,13 +1,168 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    margin: 0;
+    box-sizing: none;
+    font-family: 'Oswald', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+    --black: #150605;
+    --red: #fe3c31;
+    --pink: #F47B6E;
+    --light-blue: #EFFBFE;
+    --blue: #ACE6EC;
+    --brouwn: #a97515
 }
+
+.App {
+    background-color: #2a3d48;
+}
+
+header {
+    background-color: #0B2434;
+    color: #a97515;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: #a97515;
+}
+
+a>i:hover {
+    text-shadow: 1px 1px 2px white;
+}
+
+header>i {
+    cursor: pointer;
+}
+
+/** styling photo page ****************************/
+main>.photos {
+    margin-top: 30px;
+    padding: 20px;
+    display: grid;
+    grid-gap: 10px;
+    grid-auto-rows: 120px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-auto-flow: dense;
+}
+
+img.image-grid {
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-container {
+    position: relative;
+}
+
+.favorite-icon {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    color: var(--red);
+    font-size: 1.8rem;
+    text-shadow: -2px -1px 1px #0B2434;
+    cursor: pointer;
+}
+
+.cart-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: var(--brouwn);
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px #0B2434;
+    cursor: pointer;
+}
+
+.wide {
+    grid-column: span 2;
+    background-color: #0B2434;
+    border-radius: 15px;
+}
+
+.tall {
+    grid-row: span 2;
+    background-color: #0B2434;
+    border-radius: 15px;
+}
+
+.big {
+    grid-column: span 2;
+    grid-row: span 2;
+    background-color: #0B2434;
+    border-radius: 15px;
+}
+
+/** styling PHOTO page ****************************/
+
+
+/** styling CART page ****************************/
+
+main.cart {
+    font-size: 1.6rem;
+    min-height: 772px;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    color: var(--brouwn);
+}
+
+.cart>button {
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-size: .8em;
+    background-color: #082333;
+    box-shadow: 1px 1px 2px #1c1c1d;
+    color: var(--brouwn);
+    border: none;
+}
+
+.cart>p {
+    margin-top: 20px;
+    margin-right: 10px;
+    align-self: flex-end;
+}
+
+.cart-container {
+    margin-top: 20px;
+    text-shadow: 1px 1px 2px #0B2434;
+}
+
+.cart-item {
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #082333;
+    margin: 20px 0;
+    padding: 5px;
+    position: relative;
+}
+
+.cart-item>img {
+    border-radius: 10px;
+    width: 20%;
+}
+
+.delete-Icon {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+} 
+
+.cart-item>p {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+/** styling CART page ****************************/
